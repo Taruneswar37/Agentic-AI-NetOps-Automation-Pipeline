@@ -1,0 +1,40 @@
+# ── LLM & Orchestration ──
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-community>=0.3.0
+
+# ── RAG / Knowledge Base ──
+llama-index>=0.11.0
+llama-index-vector-stores-chroma>=0.3.0
+llama-index-embeddings-huggingface>=0.4.0
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# ── Web / API ──
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+httpx>=0.27.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+
+# ── Integrations ──
+PyGithub>=2.4.0
+slack-sdk>=3.33.0
+
+# ── Ansible ──
+ansible-core>=2.17.0
+
+# ── Utilities ──
+python-dotenv>=1.0.0
+rich>=13.9.0
+pyyaml>=6.0.0
+
+# ── Testing ──
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+
+# ── Dev Tools (optional) ──
+pre-commit>=4.0.0
+detect-secrets>=1.5.0
+ruff>=0.7.0

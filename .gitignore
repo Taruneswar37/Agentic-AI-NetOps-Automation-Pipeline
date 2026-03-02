@@ -1,0 +1,47 @@
+# ═══════════════════════════════════════════════════════════
+# Agentic NetOps — .gitignore
+# ═══════════════════════════════════════════════════════════
+
+# ── Secrets (NEVER commit) ──
+.env
+.env.*
+!.env.example
+vault/*.yml
+vault/*.yaml
+!vault/credentials.yml.example
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environment ──
+.venv/
+venv/
+env/
+
+# ── RAG Vector Store ──
+chroma_db/
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Testing ──
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Pre-commit ──
+.secrets.baseline
