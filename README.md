@@ -165,7 +165,7 @@ Agentic NetOps/
 │   ├── integrations/
 │   │   ├── servicenow.py       # ServiceNow REST client
 │   │   ├── slack.py            # Slack Block Kit client
-│   │   ├── github.py           # GitHub auto-commit client
+│   │   ├── github_client.py           # GitHub auto-commit client
 │   │   └── awx.py              # Ansible AWX REST client
 │   ├── rag/
 │   │   ├── ingest.py           # Document ingestion pipeline
@@ -174,8 +174,8 @@ Agentic NetOps/
 │   ├── webhook/
 │   │   └── server.py           # FastAPI server for Slack callbacks
 │   ├── utils/
-│   │   ├── vault_helpers.py    # Ansible Vault encryption helpers
-│   │   └── logging.py          # Structured logging
+│   │   ├── vault.py    # Ansible Vault encryption helpers
+│   │   └── logger.py          # Structured logging
 │   └── config.py               # Pydantic BaseSettings config loader
 ├── knowledge_base/
 │   ├── compliance_policies/    # Security and port policy docs
@@ -359,3 +359,4 @@ This project is for educational and enterprise demonstration purposes.
 ---
 
 *Built with [LangGraph](https://github.com/langchain-ai/langgraph) · [Claude](https://anthropic.com) · [Ansible AWX](https://github.com/ansible/awx) · [ChromaDB](https://github.com/chroma-core/chroma)*
+
