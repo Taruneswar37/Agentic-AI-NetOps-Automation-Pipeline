@@ -152,47 +152,56 @@ These rules are **non-negotiable** and enforced from day one:
 
 ```
 Agentic NetOps/
+├── knowledge_base/
+├── playbooks/
 ├── src/
 │   ├── agents/
-│   │   ├── planner.py          # Agent 1 — Reads ticket, compliance check
-│   │   ├── coder.py            # Agent 2 — Generates Ansible playbooks
-│   │   ├── validator.py        # Agent 3 — Pre-checks (ICMP + SSH)
-│   │   └── executor.py         # Agent 4 — Executes + post-validates
+│   │   ├── __init__.py
+│   │   ├── coder.py
+│   │   ├── executor.py
+│   │   ├── planner.py
+│   │   └── validator.py
 │   ├── graph/
-│   │   ├── state.py            # LangGraph state schema
-│   │   ├── orchestrator.py     # Graph definition + interrupt gates
-│   │   └── nodes.py            # Node logic for all agents
+│   │   ├── __init__.py
+│   │   ├── nodes.py
+│   │   ├── orchestrator.py
+│   │   └── state.py
 │   ├── integrations/
-│   │   ├── servicenow.py       # ServiceNow REST client
-│   │   ├── slack.py            # Slack Block Kit client
-│   │   ├── github_client.py           # GitHub auto-commit client
-│   │   └── awx.py              # Ansible AWX REST client
+│   │   ├── __init__.py
+│   │   ├── awx.py
+│   │   ├── github_client.py
+│   │   ├── servicenow.py
+│   │   └── slack.py
 │   ├── rag/
-│   │   ├── ingest.py           # Document ingestion pipeline
-│   │   ├── query.py            # RAG query interface
-│   │   └── store.py            # ChromaDB vector store
-│   ├── webhook/
-│   │   └── server.py           # FastAPI server for Slack callbacks
+│   │   ├── __init__.py
+│   │   ├── ingest.py
+│   │   ├── query.py
+│   │   └── store.py
 │   ├── utils/
-│   │   ├── vault.py    # Ansible Vault encryption helpers
-│   │   └── logger.py          # Structured logging
-│   └── config.py               # Pydantic BaseSettings config loader
-├── knowledge_base/
-│   ├── compliance_policies/    # Security and port policy docs
-│   ├── runbooks/               # Cisco, Palo Alto, Juniper runbooks
-│   └── ansible_references/     # Ansible module reference docs
-├── playbooks/                  # Auto-generated Ansible playbooks (Git-tracked)
-├── vault/                      # Ansible Vault encrypted credentials (gitignored)
-│   └── credentials.yml.example
+│   │   ├── __init__.py
+│   │   ├── logger.py
+│   │   └── vault.py
+│   ├── webhook/
+│   │   ├── __init__.py
+│   │   └── server.py
+│   ├── config.py
+│   └── main.py
 ├── tests/
+│   ├── __init__.py
 │   ├── test_agents.py
 │   ├── test_config.py
+│   ├── test_planner_live.py
 │   └── test_rag.py
-├── docker-compose.yml          # Ansible AWX in Docker
-├── pyproject.toml              # Project metadata + all dependencies
-├── .env.example                # Environment variable template
-├── .gitignore                  # Excludes .env, vault/, chroma_db/
-└── .pre-commit-config.yaml     # detect-secrets hook
+├── vault/
+│   ├── README.md
+│   └── credentials.yml.example    
+├── .env.example
+├── .gitignore
+├── .pre-commit-config.yaml
+├── README.md
+├── docker-compose.yml
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ---
@@ -359,4 +368,5 @@ This project is for educational and enterprise demonstration purposes.
 ---
 
 *Built with [LangGraph](https://github.com/langchain-ai/langgraph) · [Claude](https://anthropic.com) · [Ansible AWX](https://github.com/ansible/awx) · [ChromaDB](https://github.com/chroma-core/chroma)*
+
 
