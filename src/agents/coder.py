@@ -51,7 +51,7 @@ class CoderAgent:
         1. Query RAG for device-specific Ansible syntax
         2. Generate a complete Ansible playbook via Claude
         3. Inject vault variable references (safety net)
-        4. Commit the playbook to GitHub
+        4. Commit the playbook to GitHub.
     """
 
     def __init__(self) -> None:

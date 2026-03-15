@@ -107,7 +107,7 @@ class PlannerAgent:
         task_payload = self._parse_llm_response(response.content)
 
         if not task_payload:
-            state["error"] = "Failed to parse task details from ticket"
+            state["error"] = "Failed to parse task details from ticket."
             state["status"] = "failed"
             return state
 

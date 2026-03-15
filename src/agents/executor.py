@@ -26,7 +26,7 @@ class ExecutorAgent:
         2. Poll for completion
         3. Run post-checks (ICMP ping + TCP port connectivity)
         4. If post-checks pass → close ticket, post success to Slack
-        5. If post-checks fail → trigger rollback, update ticket, alert team
+        5. If post-checks fail → trigger rollback, update ticket, alert team.
     """
 
     def __init__(self) -> None:

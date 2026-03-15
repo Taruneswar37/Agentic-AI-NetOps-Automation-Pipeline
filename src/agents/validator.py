@@ -25,7 +25,7 @@ class ValidatorAgent:
         1. Trigger AWX pre-check job (ICMP ping + SSH connectivity)
         2. Poll for results
         3. If both pass → send Slack approval (Gate 2)
-        4. If either fails → notify engineer with diagnostics, stop pipeline
+        4. If either fails → notify engineer with diagnostics, stop pipeline.
     """
 
     def __init__(self) -> None:
