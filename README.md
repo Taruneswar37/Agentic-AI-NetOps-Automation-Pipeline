@@ -71,7 +71,7 @@ ServiceNow Ticket
 └─────────────────┘
 ```
 
-**Orchestration:** LangGraph stateful multi-agent graph with human-in-the-loop interrupt support
+**Orchestration:** LangGraph stateful multi-agent graph with human-in-the-loop interrupt support.
 
 ---
 
